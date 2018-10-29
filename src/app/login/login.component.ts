@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   pass='pikazza123';
   user='pikazza'
+  valueToDashboard='';
 
   constructor() { }
 
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   updateFromChild($event){
+    this.valueToDashboard = $event;
     alert("Form Child: "+$event );
   }
 

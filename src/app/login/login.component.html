@@ -16,8 +16,8 @@
       </div>
 
       <button type="submit" class="btn btn-success" (click)="clickDetail(user)">Submit</button>
-
+      <p>Notification received from chiled is: <br> {{valueToDashboard}}</p>
     </form>
 </div>
 
-<app-dashboard [valueFromDashboard]="user" (valueToDashboard)="updateFromChild($event)" ></app-dashboard>
+<app-dashboard [username]="user" [password]="pass" (valueToDashboard)="updateFromChild($event)" ></app-dashboard>

@@ -8,7 +8,11 @@ import { LoginComponent } from '../login/login.component';
 })
 export class DashboardComponent implements OnInit {
   @Input()
-  valueFromDashboard: string;
+  username: string;
+
+  @Input()
+  password: string;
+
   @Output()
   valueToDashboard= new EventEmitter();
 
@@ -16,11 +20,11 @@ export class DashboardComponent implements OnInit {
 }
 
   ngOnInit() {
-     console.log('Data from Parent :  ' + this.valueFromDashboard);
+     console.log('Data from Parent :  ' + this.username);
   }
 
   getUserName(valueFromDashboard){
-    alert("user name from dashboard is  "+ this.valueFromDashboard );
+    alert("user name from dashboard is  "+ this.username );
   }
 
   notifyToParent(){
