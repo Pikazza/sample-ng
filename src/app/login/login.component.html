@@ -1,0 +1,23 @@
+
+<p>
+  {{desc}}
+  </p>
+  <div class="container">
+    <h1>Hero Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="username">{{usernameL}}  :</label>
+        <input [(ngModel)]="user" type="text"  class="form-control" id="username" name="user" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">{{passwordL}}   :</label>
+        <input [(ngModel)]="pass" type="text" class="form-control" id="password" name="password">
+      </div>
+
+      <button type="submit" class="btn btn-success" (click)="clickDetail(user)">Submit</button>
+
+    </form>
+</div>
+
+<app-dashboard [valueFromDashboard]="user" (valueToDashboard)="updateFromChild($event)" ></app-dashboard>

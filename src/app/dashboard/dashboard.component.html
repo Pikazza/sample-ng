@@ -1,0 +1,21 @@
+<p>
+ Currently login user details willbe viewed right below!
+</p>
+
+<p>user name: {{ valueFromDashboard }}</p>
+<!--
+<p>password: {{pass}}  </p>
+
+<h2>{{valueFromDashboard | uppercase}} Details</h2> -->
+
+  <!-- <div><span>id: </span>{{login.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="login.name" placeholder="name"/>
+    </label>
+  </div> -->
+<button type="submit" class="btn btn-success" (click)="getUserName(valueFromDashboard)">Submit</button>
+
+
+
+<button type="submit" class="btn btn-success" (click)="notifyToParent()">Notify to parent</button>
